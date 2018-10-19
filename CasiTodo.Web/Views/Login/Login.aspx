@@ -41,8 +41,8 @@
                     <form class="col-12" id="form1" runat="server">
                         <div class="form-group">
                             <div class="form-label-group">
-                                <asp:Label ID="lblEmail" runat="server" Text="Usuario"></asp:Label>
-                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:Label ID="lblNombre" runat="server" Text="Usuario"></asp:Label>
+                                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">

@@ -20,10 +20,22 @@ namespace CasiTodo.Web.Views.Login
             {
                 string stMensaje = string.Empty;
 
-                if (string.IsNullOrEmpty(txtEmail.Text)) stMensaje += "Ingrese usuario,";
+                if (string.IsNullOrEmpty(txtNombre.Text)) stMensaje += "Ingrese usuario,";
                 if (string.IsNullOrEmpty(txtPassword.Text)) stMensaje += "Ingrese contraseña,";
 
                 if (!string.IsNullOrEmpty(stMensaje)) throw new Exception(stMensaje.TrimEnd(','));
+
+                Logica.Models.clsUsuario obclsUsuario = new Logica.Models.clsUsuario
+                {
+                    stNombre = txtNombre.Text,
+                    stPassword = txtPassword.Text
+                };
+
+                Controllers.LoginController obLoginController = new Controllers.LoginController();
+                bool blBandera = obLoginController.getValidarUsuarioController(obclsUsuario);
+
+                if (blBandera) Response.Redirect("../Index/Index.aspx");
+                else throw new Exception("Usuario o contraseña incorrecto");
             }
             catch (Exception ex)
             {
