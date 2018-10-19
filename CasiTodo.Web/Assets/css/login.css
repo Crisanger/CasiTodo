@@ -1,0 +1,19 @@
+body {
+    background: url(../img/fondo-login.jpg) no-repeat center center fixed;
+}
+.main-section {
+    margin: 0 auto;
+    margin-top: 130px;
+    padding: 0;
+}
+
+.modal-content {
+    opacity: .80;
+}
+
+.img-login {
+    width: 120px;
+    height: 120px;
+    margin-top: -40px;
+    margin-left: 108px;
+}
