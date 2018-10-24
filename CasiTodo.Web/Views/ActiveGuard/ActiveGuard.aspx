@@ -1,8 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Resources/Maestra/Maestra.Master" AutoEventWireup="true" CodeBehind="ActiveGuard.aspx.cs" Inherits="CasiTodo.Web.Views.ActiveGuard.ActiveGuard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <!-- SwettAlert -->
+    <link href="../../Assets/sweetalert/sweetalert.css" rel="stylesheet" />
+    <script src="../../Assets/sweetalert/sweetalert.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+    <!-- Seccion 1 -->
     <div class="jumbotron">
         <div class="row">
             <div class="col-md-2">
@@ -10,6 +16,7 @@
             </div>
             <div class="col-md-10">
                 <h1 class="display-4"><b>ACTIVEGUARD</b></h1>
+                <asp:Label runat="server" ID="lblOpcion" Visible="false"></asp:Label>
                 <p>
                     Control de rondas GPRS/SMS que facilita el control y monitoreo en tiempo real de las actividades de personal.
                 </p>
@@ -26,109 +33,8 @@
             <b>+</b> Añadir
         </button>
     </div>
-    <div class="container-fluid">
-        <div class="card mb-3">
-            <div class="card-header">
-                <div class="float-left">
-                    <i class="fas fa-table"></i>Dispositivos
-                </div>
-                <div class="float-right">
-                    <form runat="server" class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Buscar" aria-label="Search"
-                                aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Opciones</th>
-                            </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Opciones</th>
-                            </tr>
-                        </tfoot>
-                        <tbody>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td>
-                                    <button class="btn btn-warning">Editar</button>
-                                    <button class="btn btn-danger">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>2011/07/25</td>
-                                <td>
-                                    <button class="btn btn-warning">Editar</button>
-                                    <button class="btn btn-danger">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Ashton Cox</td>
-                                <td>Junior Technical Author</td>
-                                <td>San Francisco</td>
-                                <td>66</td>
-                                <td>2009/01/12</td>
-                                <td>
-                                    <button class="btn btn-warning">Editar</button>
-                                    <button class="btn btn-danger">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Cedric Kelly</td>
-                                <td>Senior Javascript Developer</td>
-                                <td>Edinburgh</td>
-                                <td>22</td>
-                                <td>2012/03/29</td>
-                                <td>
-                                    <button class="btn btn-warning">Editar</button>
-                                    <button class="btn btn-danger">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>Airi Satou</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>33</td>
-                                <td>2008/11/28</td>
-                                <td>
-                                    <button class="btn btn-warning">Editar</button>
-                                    <button class="btn btn-danger">Editar</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-        </div>
-    </div>
 
-    <!-- Modal -->
+    <!-- Seccion 2 Ventana Modal -->
     <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -137,38 +43,116 @@
                     <h5 class="modal-title" id="exampleModalLabel">Añadir ActiveGuard</h5>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label>Nombre</label>
-                            <input type="text" class="form-control" placeholder="Ingrese nombre">
-                        </div>
-                        <div class="col-md-4">
-                            <label>Nombre</label>
-                            <input type="text" class="form-control" placeholder="Ingrese nombre">
-                        </div>
-                        <div class="col-md-4">
-                            <label>Nombre</label>
-                            <input type="text" class="form-control" placeholder="Ingrese nombre">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-4">
+                                <asp:Label runat="server" ID="lblSerial" Text="Serial"></asp:Label>
+                                <asp:TextBox runat="server" ID="txtSerial" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvSerial" runat="server" ErrorMessage="Numero requerido" ForeColor="Red" ControlToValidate="txtSerial" ValidationGroup="ValidarRegistro"></asp:RequiredFieldValidator>
+                                <ajaxToolkit:TextBoxWatermarkExtender ID="twmSerial" runat="server" TargetControlID="txtSerial" WatermarkText="Serial del baston" />
+                            </div>
+                            <div class="col-md-4">
+                                <asp:Label runat="server" ID="lblCuenta" Text="Numero de Cuenta"></asp:Label>
+                                <asp:TextBox runat="server" ID="txtCuenta" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvCuenta" runat="server" ErrorMessage="Numero requerido" ForeColor="Red" ControlToValidate="txtCuenta" ValidationGroup="ValidarRegistro"></asp:RequiredFieldValidator>
+                                <ajaxToolkit:TextBoxWatermarkExtender ID="twmCuenta" runat="server" TargetControlID="txtCuenta" WatermarkText="Numero de cuenta de Kronos" />
+                            </div>
+                            <div class="col-md-4">
+                                <asp:Label runat="server" ID="lblPuesto" Text="Puesto"></asp:Label>
+                                <asp:DropDownList runat="server" ID="ddlPuesto" CssClass="form-control"></asp:DropDownList>
+                                <asp:RequiredFieldValidator ID="rfvPuesto" runat="server" ErrorMessage="Información obligatoria" ForeColor="Red" ControlToValidate="ddlPuesto" ValidationGroup="ValidarRegistro"></asp:RequiredFieldValidator>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label>Nombre</label>
-                            <input type="text" class="form-control" placeholder="Ingrese nombre">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-4">
+                                <asp:Label runat="server" ID="lblNumero" Text="Número"></asp:Label>
+                                <asp:TextBox runat="server" ID="txtNumero" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvNumero" runat="server" ErrorMessage="Numero requerido" ForeColor="Red" ControlToValidate="txtNumero" ValidationGroup="ValidarRegistro"></asp:RequiredFieldValidator>
+                                <ajaxToolkit:TextBoxWatermarkExtender ID="twmNumero" runat="server" TargetControlID="txtNumero" WatermarkText="Numero del baston" />
+                            </div>
+                            <div class="col-md-4">
+                                <asp:Label runat="server" ID="lblOperador" Text="Operador"></asp:Label>
+                                <asp:DropDownList runat="server" ID="ddlOperador" CssClass="form-control"></asp:DropDownList>
+                                <asp:RequiredFieldValidator ID="rfvOperador" runat="server" ErrorMessage="Información obligatoria" ForeColor="Red" ControlToValidate="ddlOperador" ValidationGroup="ValidarRegistro"></asp:RequiredFieldValidator>
+                            </div>
+                            <div class="col-md-4">
+                                <asp:Label runat="server" ID="lblBateria" Text="Bateria"></asp:Label>
+                                <asp:TextBox runat="server" ID="txtBateria" CssClass="form-control"></asp:TextBox>
+                                <ajaxToolkit:TextBoxWatermarkExtender ID="twmBateria" runat="server" TargetControlID="txtBateria" WatermarkText="Fecha en que se cambio" />
+                                <ajaxToolkit:CalendarExtender runat="server" ID="ceBateria" TargetControlID="txtBateria" />
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <label>Nombre</label>
-                            <input type="text" class="form-control" placeholder="Ingrese nombre">
-                        </div>
-                        <div class="col-md-4">
-                            <label>Nombre</label>
-                            <input type="text" class="form-control" placeholder="Ingrese nombre">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <asp:Label runat="server" ID="lblDescripcion" Text="Descripción"></asp:Label>
+                                <asp:TextBox runat="server" ID="txtDescripcion" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
+                                <ajaxToolkit:TextBoxWatermarkExtender ID="twmDescripcion" runat="server" TargetControlID="txtDescripcion" WatermarkText="Información general, no es obligatorio rellenar este campo" />
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <asp:Button runat="server" ID="btnGuardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" Text="Guardar" ValidationGroup="ValidarRegistro" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Seccion 3 -->
+    <div class="container-fluid">
+        <div class="card mb-3">
+            <div class="card-header">
+                <div class="float-left">
+                    <h5><i class="fas fa-table"></i> Dispositivos</h5>
+                </div>
+                <div class="float-right">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar" aria-label="Search"
+                            aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-12" style="overflow: auto">
+                            <asp:GridView runat="server" ID="gvwDatos"
+                                With="100%"
+                                AutoGenerateColumns="false"
+                                EmptyDataText="No se encontraron registros">
+                                <Columns>
+                                    <asp:TemplateField HeaderText="Serial">
+                                        <ItemTemplate>
+                                            <asp:Label runat="server" ID="lblIdentificacion" Text='<%# Bind("Serial") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:BoundField HeaderText="Cuenta" DataField="Cuenta" />
+                                    <asp:BoundField HeaderText="Puesto" DataField="Puesto" />
+                                    <asp:BoundField HeaderText="Numero" DataField="Numero" />
+                                    <asp:BoundField HeaderText="Operador" DataField="Operador" />
+                                    <asp:BoundField HeaderText="Bateria" DataField="Bateria" />
+                                    <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
+                                    <asp:TemplateField HeaderText="Opciones">
+                                        <ItemTemplate>
+                                            <asp:Button runat="server" ID="btnModificar" Text="Modificar" CssClass="btn btn-warning" />
+                                            <asp:Button runat="server" ID="btnEliminar" Text="Eliminar" CssClass="btn btn-danger" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

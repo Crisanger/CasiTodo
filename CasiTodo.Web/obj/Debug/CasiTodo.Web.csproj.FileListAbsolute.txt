@@ -54,3 +54,6 @@ C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Web\obj\Debug\CasiTodo.Web.cspro
 C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Web\obj\Debug\CasiTodo.Web.csproj.CopyComplete
 C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Web\obj\Debug\CasiTodo.Web.dll
 C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Web\obj\Debug\CasiTodo.Web.pdb
+C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Web\bin\CasiTodo.Logica.dll
+C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Web\bin\CasiTodo.Logica.pdb
+C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Web\bin\AjaxControlToolkit.dll

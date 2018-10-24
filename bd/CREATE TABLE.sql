@@ -1,14 +1,14 @@
 -- SECCION 1
 CREATE TABLE TIPOUSUARIO (
     tipuCodigo INT IDENTITY (1,1) NOT NULL,
-    tipuNombre VARCHAR (50) NOT NULL,
+    tipuNombre VARCHAR (50) NOT NULL, --AGREGAR UNIQUE
     CONSTRAINT PK_TipoUsuario PRIMARY KEY (tipuCodigo)
 )
 
 CREATE TABLE USUARIO (
     usuaCodigo INT IDENTITY (1,1) NOT NULL,
     usuaCorreo VARCHAR (50) NOT NULL,
-    usuaNombre VARCHAR (50) NOT NULL,
+    usuaNombre VARCHAR (50) NOT NULL UNIQUE,
     usuaContraseña VARCHAR (50) NOT NULL,
     tipuCodigo INT NOT NULL,
     CONSTRAINT PK_Usuario PRIMARY KEY (usuaCodigo),
@@ -37,7 +37,7 @@ CREATE TABLE EJECUTIVO (
 
 CREATE TABLE GUARDA (
     guarCodigo INT IDENTITY (1,1) NOT NULL,
-    guarIdentificacion VARCHAR (50),
+    guarIdentificacion VARCHAR (50) UNIQUE,
     guarNombre VARCHAR (100) NOT NULL,
     guarCelular VARCHAR (50),
     guarDireccion VARCHAR (50),
@@ -83,7 +83,7 @@ CREATE TABLE OPERADOR (
 
 CREATE TABLE ACTIVEGUARD (
     actgCodigo INT IDENTITY (1,1) NOT NULL,
-    actgSerial VARCHAR (50) NOT NULL,
+    actgSerial VARCHAR (50) NOT NULL UNIQUE,
     actgCuenta VARCHAR (50),
     puesCodigo INT NOT NULL,
     actgNumero VARCHAR (50) NOT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE ACTIVEGUARD (
 
 CREATE TABLE ACTIVETRACK (
     acttCodigo INT IDENTITY (1,1) NOT NULL,
-    acttSerial VARCHAR (50) NOT NULL,
+    acttSerial VARCHAR (50) NOT NULL UNIQUE,
     acttCuenta VARCHAR (50),
     acttNombre VARCHAR (50) NOT NULL,
     acttUbicacion VARCHAR (50) NOT NULL,
@@ -111,7 +111,7 @@ CREATE TABLE ACTIVETRACK (
 
 CREATE TABLE GPRS (
     gprsCodigo INT IDENTITY (1,1) NOT NULL,
-    gprsSerial VARCHAR (50) NOT NULL,
+    gprsSerial VARCHAR (50) NOT NULL UNIQUE,
     gprsUbicacion VARCHAR (50) NOT NULL,
     gprsNumero VARCHAR (50) NOT NULL,
     operCodigo INT NOT NULL,
@@ -121,7 +121,7 @@ CREATE TABLE GPRS (
 
 CREATE TABLE GPS (
     gpsCodigo INT IDENTITY (1,1) NOT NULL,
-    gpsImei VARCHAR (50) NOT NULL,
+    gpsImei VARCHAR (50) NOT NULL UNIQUE,
     gprsUbicacion VARCHAR (50) NOT NULL,
     gpsNumero VARCHAR (50),
     operCodigo INT NOT NULL,
@@ -138,7 +138,7 @@ CREATE TABLE SISTEMAOPERATIVO (
 
 CREATE TABLE COMPUTADOR (
     compCodigo INT IDENTITY (1,1) NOT NULL,
-    compSerial VARCHAR (50) NOT NULL,
+    compSerial VARCHAR (50) NOT NULL UNIQUE,
     marcCodigo INT NOT NULL,
     compModelo VARCHAR (50),
     compColor VARCHAR (50),

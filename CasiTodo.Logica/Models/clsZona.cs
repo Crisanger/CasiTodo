@@ -3,6 +3,6 @@
     public class clsZona
     {
         public int inCodigo { get; set; }
-        public string stNombre { get; set }
+        public string stNombre { get; set; }
     }
 }
