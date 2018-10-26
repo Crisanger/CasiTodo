@@ -7,6 +7,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <!-- Abrir Ventana modal-->
+    <script>
+        function abrir() {
+            $('#exampleModal').modal('show');
+        }
+    </script>
 
     <!-- Seccion 1 -->
     <div class="jumbotron">
@@ -57,10 +63,10 @@
                                 <asp:RequiredFieldValidator ID="rfvCuenta" runat="server" ErrorMessage="Numero requerido" ForeColor="Red" ControlToValidate="txtCuenta" ValidationGroup="ValidarRegistro"></asp:RequiredFieldValidator>
                                 <ajaxToolkit:TextBoxWatermarkExtender ID="twmCuenta" runat="server" TargetControlID="txtCuenta" WatermarkText="Numero de cuenta de Kronos" />
                             </div>
+                            <!-- DropDownList Puesto-->
                             <div class="col-md-4">
                                 <asp:Label runat="server" ID="lblPuesto" Text="Puesto"></asp:Label>
                                 <asp:DropDownList runat="server" ID="ddlPuesto" CssClass="form-control"></asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="rfvPuesto" runat="server" ErrorMessage="Información obligatoria" ForeColor="Red" ControlToValidate="ddlPuesto" ValidationGroup="ValidarRegistro"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                     </div>
@@ -72,10 +78,10 @@
                                 <asp:RequiredFieldValidator ID="rfvNumero" runat="server" ErrorMessage="Numero requerido" ForeColor="Red" ControlToValidate="txtNumero" ValidationGroup="ValidarRegistro"></asp:RequiredFieldValidator>
                                 <ajaxToolkit:TextBoxWatermarkExtender ID="twmNumero" runat="server" TargetControlID="txtNumero" WatermarkText="Numero del baston" />
                             </div>
+                            <!-- DropDownList Operador-->
                             <div class="col-md-4">
                                 <asp:Label runat="server" ID="lblOperador" Text="Operador"></asp:Label>
                                 <asp:DropDownList runat="server" ID="ddlOperador" CssClass="form-control"></asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="rfvOperador" runat="server" ErrorMessage="Información obligatoria" ForeColor="Red" ControlToValidate="ddlOperador" ValidationGroup="ValidarRegistro"></asp:RequiredFieldValidator>
                             </div>
                             <div class="col-md-4">
                                 <asp:Label runat="server" ID="lblBateria" Text="Bateria"></asp:Label>
@@ -109,7 +115,7 @@
         <div class="card mb-3">
             <div class="card-header">
                 <div class="float-left">
-                    <h5><i class="fas fa-table"></i> Dispositivos</h5>
+                    <h5><i class="fas fa-table"></i>Dispositivos</h5>
                 </div>
                 <div class="float-right">
                     <div class="input-group">
@@ -130,23 +136,41 @@
                             <asp:GridView runat="server" ID="gvwDatos"
                                 With="100%"
                                 AutoGenerateColumns="false"
-                                EmptyDataText="No se encontraron registros" HorizontalAlign="Center">
+                                EmptyDataText="No se encontraron registros" OnRowCommand="gvwDatos_RowCommand">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Serial">
                                         <ItemTemplate>
                                             <asp:Label runat="server" ID="lblIdentificacion" Text='<%# Bind("Serial") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:BoundField HeaderText="Cuenta" DataField="Cuenta" />
-                                    <asp:BoundField HeaderText="Puesto" DataField="Puesto" />
+                                    <asp:TemplateField HeaderText="Cuenta">
+                                        <ItemTemplate>
+                                            <asp:Label runat="server" ID="lblCuenta" Text='<%# Bind("Cuenta") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <%-- <asp:BoundField HeaderText="Cuenta" DataField="Cuenta" /> --%>
+                                    <asp:TemplateField HeaderText="Puesto">
+                                        <ItemTemplate>
+                                            <asp:Label runat="server" ID="lblPuesto" Text='<%# Bind("Puesto") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <%-- <asp:BoundField HeaderText="Puesto" DataField="Puesto" /> --%>
                                     <asp:BoundField HeaderText="Numero" DataField="Numero" />
-                                    <asp:BoundField HeaderText="Operador" DataField="Operador" />
+                                    <asp:TemplateField HeaderText="Operador">
+                                        <ItemTemplate>
+                                            <asp:Label runat="server" ID="lblOperador" Text='<%# Bind("Operador") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <%-- <asp:BoundField HeaderText="Operador" DataField="Operador" /> --%>
                                     <asp:BoundField HeaderText="Bateria" DataField="Bateria" />
                                     <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
+
                                     <asp:TemplateField HeaderText="Opciones">
                                         <ItemTemplate>
-                                            <asp:Button runat="server" ID="btnModificar" Text="Modificar" CssClass="btn btn-warning" />
-                                            <asp:Button runat="server" ID="btnEliminar" Text="Eliminar" CssClass="btn btn-danger" />
+                                            <asp:Button runat="server" ID="btnModificar" Text="Modificar" CssClass="btn btn-warning"
+                                                CommandName="Editar" CommandArgument="<%# ((GridViewRow)Container).RowIndex  %>" />
+                                            <asp:Button runat="server" ID="btnEliminar" Text="Eliminar" CssClass="btn btn-danger"
+                                                CommandName="Eliminar" CommandArgument="<%# ((GridViewRow)Container).RowIndex  %>" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>

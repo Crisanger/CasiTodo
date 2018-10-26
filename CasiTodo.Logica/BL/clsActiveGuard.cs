@@ -71,9 +71,9 @@ namespace CasiTodo.Logica.BL
 
                 _SqlCommand.Parameters.Add(new SqlParameter("@cSerial", obclsActiveGuard.stSerial));
                 _SqlCommand.Parameters.Add(new SqlParameter("@cCuenta", obclsActiveGuard.stCuenta));
-                _SqlCommand.Parameters.Add(new SqlParameter("@nPuesCodigo", obclsActiveGuard.obclsPuesto));
+                _SqlCommand.Parameters.Add(new SqlParameter("@nPuesCodigo", obclsActiveGuard.obclsPuesto.inCodigo));
                 _SqlCommand.Parameters.Add(new SqlParameter("@cNumero", obclsActiveGuard.stNumero));
-                _SqlCommand.Parameters.Add(new SqlParameter("@nOperCodigo", obclsActiveGuard.obclsOperador));
+                _SqlCommand.Parameters.Add(new SqlParameter("@nOperCodigo", obclsActiveGuard.obclsOperador.inCodigo));
                 _SqlCommand.Parameters.Add(new SqlParameter("@cBateria", obclsActiveGuard.stBateria));
                 _SqlCommand.Parameters.Add(new SqlParameter("@cDescripcion", obclsActiveGuard.stDescripcion));
                 _SqlCommand.Parameters.Add(new SqlParameter("@nOpcion", inOpcion));
@@ -83,7 +83,7 @@ namespace CasiTodo.Logica.BL
                 _sqlParameter.Direction = ParameterDirection.Output;
                 _sqlParameter.SqlDbType = SqlDbType.VarChar;
                 _sqlParameter.Size = 50;
-
+                 
                 _SqlCommand.Parameters.Add(_sqlParameter);
                 _SqlCommand.ExecuteNonQuery();
 
@@ -99,7 +99,7 @@ namespace CasiTodo.Logica.BL
 
         }
 
-        public DataSet getEstadoActiveGuard()
+        /*public DataSet getEstadoActiveGuard()
         {
             try
             {
@@ -127,6 +127,6 @@ namespace CasiTodo.Logica.BL
             }
             finally { _SqlConnection.Close(); }
 
-        }
+        }*/
     }
 }

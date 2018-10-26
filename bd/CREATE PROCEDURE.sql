@@ -95,5 +95,14 @@ IF @nOpcion = 3
 END
 
 
+--CONSULTAR PUESTO
+CREATE PROCEDURE spConsultarPuesto
+AS
+SELECT puesCodigo, puesNombre FROM PUESTO 
 
+
+-- CONSULTAR OPERADOR
+CREATE PROCEDURE spConsultarOperador
+AS
+SELECT operCodigo, operNombre FROM OPERADOR
 

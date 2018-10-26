@@ -121,15 +121,6 @@ namespace CasiTodo.Web.Views.ActiveGuard {
         protected global::System.Web.UI.WebControls.DropDownList ddlPuesto;
         
         /// <summary>
-        /// Control rfvPuesto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPuesto;
-        
-        /// <summary>
         /// Control lblNumero.
         /// </summary>
         /// <remarks>
@@ -182,15 +173,6 @@ namespace CasiTodo.Web.Views.ActiveGuard {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlOperador;
-        
-        /// <summary>
-        /// Control rfvOperador.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvOperador;
         
         /// <summary>
         /// Control lblBateria.

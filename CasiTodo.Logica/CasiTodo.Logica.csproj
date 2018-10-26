@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="BL\clsActiveGuard.cs" />
     <Compile Include="BL\clsConexion.cs" />
+    <Compile Include="BL\clsOperador.cs" />
+    <Compile Include="BL\clsPuesto.cs" />
     <Compile Include="BL\clsUsuario.cs" />
     <Compile Include="Models\clsActiveGuard.cs" />
     <Compile Include="Models\clsCiudad.cs" />

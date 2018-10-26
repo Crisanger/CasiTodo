@@ -6,6 +6,40 @@ namespace CasiTodo.Web.Controllers
     public class ActiveGuardController
     {
         /// <summary>
+        /// Obtiene registro de Puesto
+        /// </summary>
+        /// <returns>Data Puesto</returns>
+        public DataSet getConsultarPuestoController()
+        {
+            try
+            {
+                Logica.BL.clsPuesto obclsPuesto = new Logica.BL.clsPuesto();
+                return obclsPuesto.getConsultarPuesto();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Obtiene registro de Operador
+        /// </summary>
+        /// <returns>Data Operador</returns>
+        public DataSet getConsultarOperadorController()
+        {
+            try
+            {
+                Logica.BL.clsOperador obclsOperador = new Logica.BL.clsOperador();
+                return obclsOperador.getConsultarOperador();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Obtiene registro de ActiveGuard
         /// </summary>
         /// <returns>Data ActiveGuard</returns>
