@@ -130,7 +130,7 @@
                             <asp:GridView runat="server" ID="gvwDatos"
                                 With="100%"
                                 AutoGenerateColumns="false"
-                                EmptyDataText="No se encontraron registros">
+                                EmptyDataText="No se encontraron registros" HorizontalAlign="Center">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Serial">
                                         <ItemTemplate>

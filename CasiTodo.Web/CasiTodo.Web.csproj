@@ -1493,14 +1493,8 @@
     <Content Include="Assets\vendor\jquery\jquery.slim.js" />
     <Content Include="Assets\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Views\ActiveGuard\ActiveGuard.aspx" />
-    <Content Include="Views\ActiveTrack\ActiveTrack.aspx" />
-    <Content Include="Views\Gprs\Gprs.aspx" />
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
-    <Content Include="Views\VVSC\ActiveGuard.html" />
-    <Content Include="Views\VVSC\Index.html" />
-    <Content Include="Views\VVSC\Login.aspx" />
-    <Content Include="Views\VVSC\login.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1521,20 +1515,6 @@
     <Compile Include="Views\ActiveGuard\ActiveGuard.aspx.designer.cs">
       <DependentUpon>ActiveGuard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\ActiveTrack\ActiveTrack.aspx.cs">
-      <DependentUpon>ActiveTrack.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\ActiveTrack\ActiveTrack.aspx.designer.cs">
-      <DependentUpon>ActiveTrack.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Gprs\Gprs.aspx.cs">
-      <DependentUpon>Gprs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Gprs\Gprs.aspx.designer.cs">
-      <DependentUpon>Gprs.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\Index\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1547,13 +1527,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Login\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\VVSC\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\VVSC\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -1626,9 +1599,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Celulares\" />
-    <Folder Include="Views\Computadores\" />
-    <Folder Include="Views\Gps\" />
+    <Folder Include="Views\Almacen\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CasiTodo.Logica\CasiTodo.Logica.csproj">

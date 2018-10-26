@@ -4,3 +4,9 @@ C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica
 C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.csproj.CoreCompileInputs.cache
 C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.dll
 C:\Users\Soporte\source\repos\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.pdb
+C:\Users\razie\Documents\GitHub\CasiTodo\CasiTodo.Logica\bin\Debug\CasiTodo.Logica.dll
+C:\Users\razie\Documents\GitHub\CasiTodo\CasiTodo.Logica\bin\Debug\CasiTodo.Logica.pdb
+C:\Users\razie\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.csprojAssemblyReference.cache
+C:\Users\razie\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.csproj.CoreCompileInputs.cache
+C:\Users\razie\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.dll
+C:\Users\razie\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.pdb

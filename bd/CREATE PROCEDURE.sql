@@ -1,9 +1,12 @@
+-- CONSULTAR USUARIO
 CREATE PROCEDURE spConsultarUsuario
     @cNombre VARCHAR (50),
     @cPassword VARCHAR (50)
 AS
 SELECT 1 FROM USUARIO WHERE usuaNombre = @cNombre AND usuaContraseña = @cPassword;
 
+
+-- CONSULTAR ACTIVEGUARD
 CREATE PROCEDURE spConsultarActiveGuard
 AS
 SELECT dbo.ACTIVEGUARD.actgSerial AS Serial, 
@@ -17,6 +20,8 @@ FROM dbo.ACTIVEGUARD INNER JOIN
      dbo.OPERADOR ON dbo.ACTIVEGUARD.operCodigo = dbo.OPERADOR.operCodigo INNER JOIN 
      dbo.PUESTO ON dbo.ACTIVEGUARD.puesCodigo = dbo.PUESTO.puesCodigo
 
+
+-- ADMINISTRAR ACTIVEGUARD
 CREATE PROCEDURE spAdministrarActiveGuard
     @cSerial VARCHAR (50),
     @cCuenta VARCHAR (50),
@@ -34,8 +39,15 @@ IF @nOpcion = 1
     BEGIN
     IF NOT EXISTS (SELECT 1 FROM ACTIVEGUARD WHERE actgSerial = @cSerial)
         BEGIN
-        INSERT INTO ACTIVEGUARD VALUES (@cSerial,@cCuenta,@nPuesCodigo,@cNumero,@nOperCodigo,@cBateria,@cDescripcion)
-        SET @cMensaje = 'Se realizo proceso con exito'
+        IF NOT EXISTS (SELECT 1 FROM ACTIVEGUARD WHERE actgNumero = @cNumero)
+            BEGIN
+            INSERT INTO ACTIVEGUARD VALUES (@cSerial,@cCuenta,@nPuesCodigo,@cNumero,@nOperCodigo,@cBateria,@cDescripcion)
+            SET @cMensaje = 'Se realizo proceso con exito'
+        END
+        ELSE
+            BEGIN
+            SET @cMensaje = 'El Numero ya esta registrado'
+        END
     END
     ELSE
         BEGIN

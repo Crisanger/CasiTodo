@@ -37,9 +37,15 @@ namespace CasiTodo.Web.Views.ActiveGuard
                 Logica.Models.clsActiveGuard obclsActiveGuard = new Logica.Models.clsActiveGuard{
                     stSerial = txtSerial.Text,
                     stCuenta = txtCuenta.Text,
-                    /*obclsPuesto = ddlPuesto.SelectedValue,*/
+                    obclsPuesto = new Logica.Models.clsPuesto
+                    {
+                        inCodigo = Convert.ToInt32(ddlPuesto.SelectedValue)
+                    },
                     stNumero = txtNumero.Text,
-                    /*obclsOperador = ddlOperador.SelectedItem,*/
+                    obclsOperador = new Logica.Models.clsOperador
+                    {
+                        inCodigo = Convert.ToInt32(ddlOperador.SelectedValue)
+                    },
                     stBateria = txtBateria.Text,
                     stDescripcion = txtDescripcion.Text
 
