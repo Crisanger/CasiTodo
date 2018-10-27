@@ -102,16 +102,11 @@ namespace CasiTodo.Web.Views.ActiveGuard
 
                     txtSerial.Text = ((Label)gvwDatos.Rows[inIndice].FindControl("lblIdentificacion")).Text;
                     txtCuenta.Text = ((Label)gvwDatos.Rows[inIndice].FindControl("lblCuenta")).Text;
-                    /*txtCuenta.Text = gvwDatos.Rows[inIndice].Cells[1].Text.Equals("&nbsp;") ? string.Empty : gvwDatos.Rows[inIndice].Cells[1].Text;*/
-                    /*ddlPuesto.Text = gvwDatos.Rows[inIndice].Cells[2].Text.Equals("&nbsp;") ? string.Empty : gvwDatos.Rows[inIndice].Cells[2].Text;*/
                     txtNumero.Text = gvwDatos.Rows[inIndice].Cells[3].Text.Equals("&nbsp;") ? string.Empty : gvwDatos.Rows[inIndice].Cells[3].Text;
-                    /*ddlOperador.Text = gvwDatos.Rows[inIndice].Cells[4].Text.Equals("&nbsp;") ? string.Empty : gvwDatos.Rows[inIndice].Cells[4].Text;*/
                     txtBateria.Text = gvwDatos.Rows[inIndice].Cells[5].Text.Equals("&nbsp;") ? string.Empty : gvwDatos.Rows[inIndice].Cells[5].Text;
                     txtDescripcion.Text = gvwDatos.Rows[inIndice].Cells[6].Text.Equals("&nbsp;") ? string.Empty : gvwDatos.Rows[inIndice].Cells[6].Text;
-                    ddlPuesto.Text = ((Label)gvwDatos.Rows[inIndice].FindControl("lblPuesto")).Text;
-                    /*ddlPuesto.Text = gvwDatos.Rows[inIndice].Cells[2].Text.Equals("&nbsp;") ? string.Empty : gvwDatos.Rows[inIndice].Cells[2].Text;*/
-                    ddlOperador.Text = ((Label)gvwDatos.Rows[inIndice].FindControl("lblOperador")).Text;
-                    /*ddlOperador.Text = gvwDatos.Rows[inIndice].Cells[4].Text.Equals("&nbsp;") ? string.Empty : gvwDatos.Rows[inIndice].Cells[4].Text;*/
+                    ddlPuesto.Text = ((Label)gvwDatos.Rows[inIndice].FindControl("lblCodigoPuesto")).Text;
+                    ddlOperador.Text = ((Label)gvwDatos.Rows[inIndice].FindControl("lblCodigoOperador")).Text;
                 }
                 else if (e.CommandName.Equals("Eliminar"))
                 {

@@ -33,7 +33,7 @@ namespace CasiTodo.Logica.BL
                 _SqlConnection = new SqlConnection(stConexion);
                 _SqlConnection.Open();
 
-                _SqlCommand = new SqlCommand("spConsultarActiveGuard", _SqlConnection);
+                _SqlCommand = new SqlCommand("spConsultarActiveGuard2", _SqlConnection);
                 _SqlCommand.CommandType = CommandType.StoredProcedure;
 
                 _SqlCommand.ExecuteNonQuery();
@@ -87,8 +87,10 @@ namespace CasiTodo.Logica.BL
                 _SqlCommand.Parameters.Add(_sqlParameter);
                 _SqlCommand.ExecuteNonQuery();
 
+                if (!_sqlParameter.Value.ToString().Equals("OK"))
+                    throw new Exception(_sqlParameter.Value.ToString());
 
-                return _sqlParameter.Value.ToString();
+                return "Se realizo proceso con exito";
 
             }
             catch (Exception ex)

@@ -132,7 +132,7 @@
             <div class="card-body">
                 <div class="form-group">
                     <div class="form-row">
-                        <div class="col-md-12" style="overflow: auto">
+                        <div class="col-md-12" style="overflow: auto;width: 100%">
                             <asp:GridView runat="server" ID="gvwDatos"
                                 With="100%"
                                 AutoGenerateColumns="false"
@@ -171,6 +171,12 @@
                                                 CommandName="Editar" CommandArgument="<%# ((GridViewRow)Container).RowIndex  %>" />
                                             <asp:Button runat="server" ID="btnEliminar" Text="Eliminar" CssClass="btn btn-danger"
                                                 CommandName="Eliminar" CommandArgument="<%# ((GridViewRow)Container).RowIndex  %>" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField Visible="false">
+                                        <ItemTemplate>
+                                            <asp:Label runat="server" ID="lblCodigoPuesto" Text='<%# Bind("CodigoPuesto") %>'></asp:Label>
+                                            <asp:Label runat="server" ID="lblCodigoOperador" Text='<%# Bind("CodigoOperador") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>
