@@ -31,6 +31,15 @@ namespace CasiTodo.Web.Views.ActiveGuard {
         protected global::System.Web.UI.WebControls.Label lblOpcion;
         
         /// <summary>
+        /// Control btnExportar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExportar;
+        
+        /// <summary>
         /// Control lblSerial.
         /// </summary>
         /// <remarks>
@@ -236,6 +245,15 @@ namespace CasiTodo.Web.Views.ActiveGuard {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::AjaxControlToolkit.TextBoxWatermarkExtender twmDescripcion;
+        
+        /// <summary>
+        /// Control btnCancelar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
         
         /// <summary>
         /// Control btnGuardar.

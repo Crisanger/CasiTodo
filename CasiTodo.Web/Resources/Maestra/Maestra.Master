@@ -43,7 +43,7 @@
     <form runat="server">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">CASI TODO
+                <a class="navbar-brand" href="../../Views/Index/Index.aspx">CASI TODO
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -59,9 +59,9 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
                                 <a class="dropdown-item" href="../../Views/ActiveGuard/ActiveGuard.aspx"><i class="fas fa-broadcast-tower"></i>ActiveGuard</a>
-                                <a class="dropdown-item" href="../../Views/ActiveTrack/ActiveTrack.aspx"><i class="fas fa-broadcast-tower"></i><span>ActiveTrack</span></a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-broadcast-tower"></i><span>ActiveTrack</span></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../../Views/Gprs/Gprs.aspx"><i class="fas fa-broadcast-tower"></i>Gprs</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-broadcast-tower"></i>Gprs</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-map-marked-alt"></i>Gps</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i>Computadores</a>
@@ -100,21 +100,6 @@
         </nav>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-        <!-- /.container-fluid -->
-        <!-- Sticky Footer -->
-        <!--<footer class="sticky-footer">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright © Your Website 2018</span>
-                </div>
-            </div>
-        </footer>-->
-
-
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
     </form>
 </body>
 </html>

@@ -1,4 +1,4 @@
--- CONSULTAR USUARIO
+﻿-- CONSULTAR USUARIO
 CREATE PROCEDURE spConsultarUsuario
     @cNombre VARCHAR (50),
     @cPassword VARCHAR (50)
@@ -105,4 +105,25 @@ SELECT puesCodigo, puesNombre FROM PUESTO
 CREATE PROCEDURE spConsultarOperador
 AS
 SELECT operCodigo, operNombre FROM OPERADOR
+
+
+-- ESTADISITICAS
+SPCONSULTARESTADISTICAS
+SELECT dbo.OPERADOR.operNombre AS Operador, 
+       COUNT(dbo.ACTIVEGUARD.operCodigo) AS Cantidad
+FROM dbo.ACTIVEGUARD INNER JOIN
+     dbo.OPERADOR ON dbo.ACTIVEGUARD.operCodigo = dbo.OPERADOR.operCodigo GROUP BY dbo.OPERADOR.operNombre
+
+
+-- ESTADISTICAS 2
+
+ALTER PROCEDURE spEstadisticas2
+AS 
+SELECT dbo.EJECUTIVO.ejecNombre AS Ejecutivo, 
+       COUNT(dbo.ZONA.zonaCodigo) AS Cantidad2
+FROM dbo.EJECUTIVO INNER JOIN
+     dbo.PUESTO ON dbo.EJECUTIVO.ejecCodigo = dbo.PUESTO.ejecCodigo INNER JOIN
+     dbo.ZONA ON dbo.PUESTO.zonaCodigo = dbo.ZONA.zonaCodigo 
+	 GROUP BY dbo.EJECUTIVO.ejecNombre
+
 

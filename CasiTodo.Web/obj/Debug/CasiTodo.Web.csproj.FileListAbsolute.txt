@@ -175,3 +175,5 @@ C:\Users\Usuario.Usuario-PC.000\Documents\GitHub\CasiTodo\CasiTodo.Web\obj\Debug
 C:\Users\Usuario.Usuario-PC.000\Documents\GitHub\CasiTodo\CasiTodo.Web\obj\Debug\CasiTodo.Web.csproj.CopyComplete
 C:\Users\Usuario.Usuario-PC.000\Documents\GitHub\CasiTodo\CasiTodo.Web\obj\Debug\CasiTodo.Web.dll
 C:\Users\Usuario.Usuario-PC.000\Documents\GitHub\CasiTodo\CasiTodo.Web\obj\Debug\CasiTodo.Web.pdb
+C:\Users\razie\Documents\GitHub\CasiTodo\CasiTodo.Web\bin\itextsharp.dll
+C:\Users\razie\Documents\GitHub\CasiTodo\CasiTodo.Web\bin\itextsharp.xml

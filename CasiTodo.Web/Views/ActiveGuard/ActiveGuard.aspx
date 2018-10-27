@@ -38,6 +38,8 @@
         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">
             <b>+</b> Añadir
         </button>
+        <hr />
+        <asp:Button runat="server" ID="btnExportar" Text="Exportar a Excel" CssClass="btn btn-success btn-block" OnClick="btnExportar_Click"/>
     </div>
 
     <!-- Seccion 2 Ventana Modal -->
@@ -102,7 +104,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <asp:Button runat="server" ID="btnCancelar" CssClass="btn btn-secondary" Text="Cancelar" OnClick="btnCancelar_Click" />
                     <asp:Button runat="server" ID="btnGuardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" Text="Guardar" ValidationGroup="ValidarRegistro" />
                 </div>
             </div>
@@ -115,7 +117,7 @@
         <div class="card mb-3">
             <div class="card-header">
                 <div class="float-left">
-                    <h5><i class="fas fa-table"></i>Dispositivos</h5>
+                    <h5><i class="fas fa-table"></i> Dispositivos</h5>
                 </div>
                 <div class="float-right">
                     <div class="input-group">
@@ -129,14 +131,13 @@
                     </div>
                 </div>
             </div>
+            <%-- Tabla GridView --%>
             <div class="card-body">
                 <div class="form-group">
                     <div class="form-row">
-                        <div class="col-md-12" style="overflow: auto;width: 100%">
-                            <asp:GridView runat="server" ID="gvwDatos"
-                                With="100%"
-                                AutoGenerateColumns="false"
-                                EmptyDataText="No se encontraron registros" OnRowCommand="gvwDatos_RowCommand">
+                        <div class="col-md-12" style="overflow: auto">
+                            <asp:GridView runat="server" ID="gvwDatos" With="100%" AutoGenerateColumns="false" EmptyDataText="No se encontraron registros" OnRowCommand="gvwDatos_RowCommand"
+                                BorderWidth="3px" CellPadding="5" CssClass="table-responsive-lg">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Serial">
                                         <ItemTemplate>
@@ -165,11 +166,12 @@
                                     <asp:BoundField HeaderText="Bateria" DataField="Bateria" />
                                     <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
 
+                                    <%-- Opciones --%>
                                     <asp:TemplateField HeaderText="Opciones">
                                         <ItemTemplate>
-                                            <asp:Button runat="server" ID="btnModificar" Text="Modificar" CssClass="btn btn-warning"
+                                            <asp:Button runat="server" ID="btnModificar" Text="Modificar" CssClass="btn btn-warning btn-block"
                                                 CommandName="Editar" CommandArgument="<%# ((GridViewRow)Container).RowIndex  %>" />
-                                            <asp:Button runat="server" ID="btnEliminar" Text="Eliminar" CssClass="btn btn-danger"
+                                            <asp:Button runat="server" ID="btnEliminar" Text="Eliminar" CssClass="btn btn-danger btn-block"
                                                 CommandName="Eliminar" CommandArgument="<%# ((GridViewRow)Container).RowIndex  %>" />
                                         </ItemTemplate>
                                     </asp:TemplateField>

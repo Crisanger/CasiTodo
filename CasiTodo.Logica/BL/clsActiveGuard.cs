@@ -100,35 +100,5 @@ namespace CasiTodo.Logica.BL
             finally { _SqlConnection.Close(); }
 
         }
-
-        /*public DataSet getEstadoActiveGuard()
-        {
-            try
-            {
-                DataSet dsConsulta = new DataSet();
-
-                _SqlConnection = new SqlConnection(stConexion);
-                _SqlConnection.Open();
-
-                _SqlCommand = new SqlCommand("", _SqlConnection);
-                _SqlCommand.CommandType = CommandType.StoredProcedure;
-
-
-
-                _SqlCommand.ExecuteNonQuery();
-
-                _SqlDataAdapter = new SqlDataAdapter(_SqlCommand);
-                _SqlDataAdapter.Fill(dsConsulta);
-
-                return dsConsulta;
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally { _SqlConnection.Close(); }
-
-        }*/
     }
 }

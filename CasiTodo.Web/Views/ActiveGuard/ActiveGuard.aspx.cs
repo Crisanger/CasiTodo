@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Data;
+using System.IO;
+using System.Text;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace CasiTodo.Web.Views.ActiveGuard
@@ -141,6 +145,41 @@ namespace CasiTodo.Web.Views.ActiveGuard
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "Mensaje", "<script> swal('Error', '" + ex.Message + "', 'error') </script>");
             }
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lblOpcion.Text = txtCuenta.Text = txtSerial.Text = txtNumero.Text = txtBateria.Text = txtDescripcion.Text = string.Empty;
+            }
+            catch(Exception ex) { throw ex; }
+        }
+
+        protected void btnExportar_Click(object sender, EventArgs e)
+        {
+
+            StringBuilder sb = new StringBuilder();
+            StringWriter sw = new StringWriter(sb);
+            HtmlTextWriter htw = new HtmlTextWriter(sw);
+            Page page = new Page();
+            HtmlForm form = new HtmlForm();
+
+            gvwDatos.EnableViewState = false;
+            page.EnableEventValidation = false;
+            page.DesignerInitialize();
+            page.Controls.Add(form);
+            form.Controls.Add(gvwDatos);
+            page.RenderControl(htw);
+
+            Response.Clear();
+            Response.Buffer = true;
+            Response.ContentType = "application/vnd.ms-excel";
+            Response.AddHeader("Content-Disposition", "attachment; filename= InformeDeDatos.xls");
+            Response.Charset = "UTF-8";
+            Response.ContentEncoding = Encoding.Default;
+            Response.Write(sb.ToString());
+            Response.End();
         }
     }
 }
