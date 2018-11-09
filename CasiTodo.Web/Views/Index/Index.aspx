@@ -24,7 +24,7 @@
     <div class="container-fluid">
         <div class="card mb-3">
             <div class="card-header">
-                <h5><i class="fas fa-table"></i>Operadoras por dispositivo</h5>
+                <h5><i class="fas fa-table"></i> Operadoras por dispositivo</h5>
             </div>
             <%-- Tabla GridView --%>
             <div class="card-body">

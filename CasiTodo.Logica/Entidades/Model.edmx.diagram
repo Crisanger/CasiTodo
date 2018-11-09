@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b86b9da8676242cdb4b2c50c4e1308aa" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.ACTIVEGUARD" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.ACTIVETRACK" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.CIUDAD" Width="1.5" PointX="2.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.CLIENTE" Width="1.5" PointX="0.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.COMPUTADOR" Width="1.5" PointX="11.625" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.EJECUTIVO" Width="1.5" PointX="7.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.GPRS" Width="1.5" PointX="7.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.GPS" Width="1.5" PointX="8.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.GUARDA" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.MARCA" Width="1.5" PointX="9" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.OPERADOR" Width="1.5" PointX="11.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.PLATAFORMA" Width="1.5" PointX="7.875" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.PUESTO" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.SERVICIO" Width="1.5" PointX="4" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.SISTEMAOPERATIVO" Width="1.5" PointX="9.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.sysdiagrams" Width="1.5" PointX="11.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.TIPOCLIENTE" Width="1.5" PointX="2.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.TIPODEIDENTIFICACION" Width="1.5" PointX="0.5" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.TIPOUSUARIO" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.USUARIO" Width="1.5" PointX="0.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdCasiTodoPruebaModel.ZONA" Width="1.5" PointX="5.875" PointY="12.5" IsExpanded="true" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_ActiveGuard_1" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_ActiveGuard_2" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_ActiveTrack" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Cliente_2" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Guarda" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Puesto_1" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Cliente_1" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Cliente_3" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Cliente_4" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Cliente_5" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Cliente_6" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Computador_1" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Computador_2" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Computador_3" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Puesto_3" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Gprs" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Gps" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Puesto_2" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="bdCasiTodoPruebaModel.FK_Gps1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

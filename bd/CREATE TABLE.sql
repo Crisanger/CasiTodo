@@ -126,7 +126,7 @@ CREATE TABLE GPS (
     gpsNumero VARCHAR (50),
     operCodigo INT NOT NULL,
     CONSTRAINT PK_Gps PRIMARY KEY (gpsCodigo),
-    CONSTRAINT FK_Gps FOREIGN KEY (operCodigo) REFERENCES GPS (gpsCodigo)
+    CONSTRAINT FK_Gps FOREIGN KEY (operCodigo) REFERENCES OPERADOR (operCodigo)
 )
 
 -- SECCION 5
@@ -148,4 +148,56 @@ CREATE TABLE COMPUTADOR (
     CONSTRAINT FK_Computador_1 FOREIGN KEY (marcCodigo) REFERENCES MARCA (marcCodigo),
     CONSTRAINT FK_Computador_2 FOREIGN KEY (sisoCodigo) REFERENCES SISTEMAOPERATIVO (sisoCodigo),
     CONSTRAINT FK_Computador_3 FOREIGN KEY (puesCodigo) REFERENCES PUESTO (puesCodigo)
+)
+
+-- 08 / NOV / 2018
+CREATE TABLE TIPODEIDENTIFICACION(
+    tipiCodigo INT IDENTITY (1,1) NOT NULL,
+    tipiNombre VARCHAR (50) UNIQUE,
+    CONSTRAINT PK_TipoDeIdentificacion PRIMARY KEY(tipiCodigo)
+)
+
+CREATE TABLE TIPOCLIENTE(
+    tipcCodigo INT IDENTITY (1,1) NOT NULL,
+    tipcNombre VARCHAR (50) NOT NULL,
+    CONSTRAINT PK_TipoCliente PRIMARY KEY (tipcCodigo)
+)
+
+CREATE TABLE SERVICIO (
+    servCodigo INT IDENTITY (1,1) NOT NULL,
+    servNombre VARCHAR (50) NOT NULL UNIQUE,
+    CONSTRAINT PK_Servicio PRIMARY KEY (servCodigo)
+)
+
+CREATE TABLE PLATAFORMA (
+    platCodigo INT IDENTITY (1,1) NOT NULL,
+    platNombre VARCHAR (50) NOT NULL UNIQUE,
+    CONSTRAINT PK_Plataforma PRIMARY KEY (platCodigo)
+)
+
+CREATE TABLE CLIENTE (
+    clieCodigo INT IDENTITY (1,1) NOT NULL,
+    tipiCodigo INT NOT NULL,
+    clieIdentificacion VARCHAR (50) NOT NULL UNIQUE,
+    clieNombre VARCHAR (50) NOT NULL UNIQUE,
+    clieDireccion VARCHAR (50),
+    ciudCodigo INT NOT NULL,
+    clieTelefono VARCHAR (50),
+    clieExtencion VARCHAR (50),
+    clieCorreo VARCHAR (50),
+    clieRepresentanteLegal VARCHAR (50),
+    ejecCodigo INT NOT NULL,
+    tipcCodigo INT NOT NULL,
+    servCodigo INT NOT NULL,
+    platCodigo INT NOT NULL,
+    clieVideoVerificacion CHAR (2),
+    clieFechaDeInicio VARCHAR (50),
+    clieFechaDeFin VARCHAR (50)
+    CONSTRAINT PK_Cliente PRIMARY KEY (clieCodigo),
+    CONSTRAINT FK_Cliente_1 FOREIGN KEY (tipiCodigo) REFERENCES TIPODEIDENTIFICACION (tipiCodigo),
+    CONSTRAINT FK_Cliente_2 FOREIGN KEY (ciudCodigo) REFERENCES CIUDAD (ciudCodigo),
+    CONSTRAINT FK_Cliente_3 FOREIGN KEY (ejecCodigo) REFERENCES EJECUTIVO (ejecCodigo),
+    CONSTRAINT FK_Cliente_4 FOREIGN KEY (tipcCodigo) REFERENCES TIPOCLIENTE (tipcCodigo),
+    CONSTRAINT FK_Cliente_5 FOREIGN KEY (servCodigo) REFERENCES SERVICIO (servCodigo),
+    CONSTRAINT FK_Cliente_6 FOREIGN KEY (platCodigo) REFERENCES PLATAFORMA (platCodigo)
 )

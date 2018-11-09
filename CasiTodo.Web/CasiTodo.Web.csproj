@@ -46,6 +46,12 @@
     <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
     </Reference>
@@ -79,6 +85,7 @@
     <Content Include="Assets\css\sb-admin.min.css" />
     <Content Include="Assets\img\Activeguard.png" />
     <Content Include="Assets\img\bootstrap-solid.svg" />
+    <Content Include="Assets\img\clientes.png" />
     <Content Include="Assets\img\Estadisticas.png" />
     <Content Include="Assets\img\favicon.ico" />
     <Content Include="Assets\img\fondo-login.jpg" />
@@ -1497,6 +1504,7 @@
     <Content Include="Assets\vendor\jquery\jquery.slim.js" />
     <Content Include="Assets\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Views\ActiveGuard\ActiveGuard.aspx" />
+    <Content Include="Views\Clientes\Clientes.aspx" />
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
     <Content Include="Web.config" />
@@ -1519,6 +1527,13 @@
     </Compile>
     <Compile Include="Views\ActiveGuard\ActiveGuard.aspx.designer.cs">
       <DependentUpon>ActiveGuard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clientes\Clientes.aspx.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Clientes\Clientes.aspx.designer.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Index\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -1603,9 +1618,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Almacen\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\CasiTodo.Logica\CasiTodo.Logica.csproj">
       <Project>{5ec82163-b43b-4976-bb87-a16fa21f6784}</Project>

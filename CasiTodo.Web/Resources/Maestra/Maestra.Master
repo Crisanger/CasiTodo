@@ -55,17 +55,17 @@
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-broadcast-tower"></i>
-                                <span>Dispositivos</span>
+                                <span> Dispositivos</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-                                <a class="dropdown-item" href="../../Views/ActiveGuard/ActiveGuard.aspx"><i class="fas fa-broadcast-tower"></i>ActiveGuard</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-broadcast-tower"></i><span>ActiveTrack</span></a>
+                                <a class="dropdown-item" href="../../Views/ActiveGuard/ActiveGuard.aspx"><i class="fas fa-broadcast-tower"></i> ActiveGuard</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-broadcast-tower"></i><span> ActiveTrack</span></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="fas fa-broadcast-tower"></i>Gprs</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-map-marked-alt"></i>Gps</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-broadcast-tower"></i> Gprs</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-map-marked-alt"></i> Gps</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i>Computadores</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i>Celulares</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-laptop"></i> Computadores</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i> Celulares</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown no-arrow mx-1">
@@ -75,20 +75,23 @@
                                 <span>Personas</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-                                <a class="dropdown-item" href="#"><i class="fas fa-user-shield"></i>Guardas</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-user-friends"></i>Servicios Generales</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user-shield"></i> Guardas</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user-friends"></i> Servicios Generales</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="fas fa-user-tie"></i>Administrativo</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user-tie"></i> Administrativo</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-city"></i>
-                                <span>Puestos</span>
+                                <span>Clientes</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-                                <a class="dropdown-item" href="#"><i class="fas fa-building"></i>Puestos</a>
+                                <a class="dropdown-item" href="../../Views/Clientes/Clientes.aspx"><i class="fas fa-building"></i> Clientes</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user-shield"></i> Seguridad Fisica</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-bell"></i> Monitoreo Alarma</a>
                             </div>
                         </li>
                         <li class="nav-item">
