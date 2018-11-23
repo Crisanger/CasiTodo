@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdCasiTodoPruebaModelStoreContainer" CdmEntityContainer="bdCasiTodoPruebaEntities">
+    <EntitySetMapping Name="ACTIVEGUARD">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.ACTIVEGUARD">
+        <MappingFragment StoreEntitySet="ACTIVEGUARD">
+          <ScalarProperty Name="actgCodigo" ColumnName="actgCodigo" />
+          <ScalarProperty Name="actgSerial" ColumnName="actgSerial" />
+          <ScalarProperty Name="actgCuenta" ColumnName="actgCuenta" />
+          <ScalarProperty Name="puesCodigo" ColumnName="puesCodigo" />
+          <ScalarProperty Name="actgNumero" ColumnName="actgNumero" />
+          <ScalarProperty Name="operCodigo" ColumnName="operCodigo" />
+          <ScalarProperty Name="actgBateria" ColumnName="actgBateria" />
+          <ScalarProperty Name="actgDescripcion" ColumnName="actgDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACTIVETRACK">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.ACTIVETRACK">
+        <MappingFragment StoreEntitySet="ACTIVETRACK">
+          <ScalarProperty Name="acttCodigo" ColumnName="acttCodigo" />
+          <ScalarProperty Name="acttSerial" ColumnName="acttSerial" />
+          <ScalarProperty Name="acttCuenta" ColumnName="acttCuenta" />
+          <ScalarProperty Name="acttNombre" ColumnName="acttNombre" />
+          <ScalarProperty Name="acttUbicacion" ColumnName="acttUbicacion" />
+          <ScalarProperty Name="acttNumero" ColumnName="acttNumero" />
+          <ScalarProperty Name="operCodigo" ColumnName="operCodigo" />
+          <ScalarProperty Name="acttBateria" ColumnName="acttBateria" />
+          <ScalarProperty Name="acttDescripcion" ColumnName="acttDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CIUDAD">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.CIUDAD">
+        <MappingFragment StoreEntitySet="CIUDAD">
+          <ScalarProperty Name="ciudCodigo" ColumnName="ciudCodigo" />
+          <ScalarProperty Name="ciudNombre" ColumnName="ciudNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="clieCodigo" ColumnName="clieCodigo" />
+          <ScalarProperty Name="tipiCodigo" ColumnName="tipiCodigo" />
+          <ScalarProperty Name="clieIdentificacion" ColumnName="clieIdentificacion" />
+          <ScalarProperty Name="clieNombre" ColumnName="clieNombre" />
+          <ScalarProperty Name="clieDireccion" ColumnName="clieDireccion" />
+          <ScalarProperty Name="ciudCodigo" ColumnName="ciudCodigo" />
+          <ScalarProperty Name="clieTelefono" ColumnName="clieTelefono" />
+          <ScalarProperty Name="clieExtencion" ColumnName="clieExtencion" />
+          <ScalarProperty Name="clieCorreo" ColumnName="clieCorreo" />
+          <ScalarProperty Name="clieRepresentanteLegal" ColumnName="clieRepresentanteLegal" />
+          <ScalarProperty Name="ejecCodigo" ColumnName="ejecCodigo" />
+          <ScalarProperty Name="tipcCodigo" ColumnName="tipcCodigo" />
+          <ScalarProperty Name="servCodigo" ColumnName="servCodigo" />
+          <ScalarProperty Name="platCodigo" ColumnName="platCodigo" />
+          <ScalarProperty Name="clieVideoVerificacion" ColumnName="clieVideoVerificacion" />
+          <ScalarProperty Name="clieFechaDeInicio" ColumnName="clieFechaDeInicio" />
+          <ScalarProperty Name="clieFechaDeFin" ColumnName="clieFechaDeFin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPUTADOR">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.COMPUTADOR">
+        <MappingFragment StoreEntitySet="COMPUTADOR">
+          <ScalarProperty Name="compCodigo" ColumnName="compCodigo" />
+          <ScalarProperty Name="compSerial" ColumnName="compSerial" />
+          <ScalarProperty Name="marcCodigo" ColumnName="marcCodigo" />
+          <ScalarProperty Name="compModelo" ColumnName="compModelo" />
+          <ScalarProperty Name="compColor" ColumnName="compColor" />
+          <ScalarProperty Name="sisoCodigo" ColumnName="sisoCodigo" />
+          <ScalarProperty Name="puesCodigo" ColumnName="puesCodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EJECUTIVO">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.EJECUTIVO">
+        <MappingFragment StoreEntitySet="EJECUTIVO">
+          <ScalarProperty Name="ejecCodigo" ColumnName="ejecCodigo" />
+          <ScalarProperty Name="ejecNombre" ColumnName="ejecNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPRS">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.GPRS">
+        <MappingFragment StoreEntitySet="GPRS">
+          <ScalarProperty Name="gprsCodigo" ColumnName="gprsCodigo" />
+          <ScalarProperty Name="gprsSerial" ColumnName="gprsSerial" />
+          <ScalarProperty Name="gprsUbicacion" ColumnName="gprsUbicacion" />
+          <ScalarProperty Name="gprsNumero" ColumnName="gprsNumero" />
+          <ScalarProperty Name="operCodigo" ColumnName="operCodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPS">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.GPS">
+        <MappingFragment StoreEntitySet="GPS">
+          <ScalarProperty Name="gpsCodigo" ColumnName="gpsCodigo" />
+          <ScalarProperty Name="gpsImei" ColumnName="gpsImei" />
+          <ScalarProperty Name="gprsUbicacion" ColumnName="gprsUbicacion" />
+          <ScalarProperty Name="gpsNumero" ColumnName="gpsNumero" />
+          <ScalarProperty Name="operCodigo" ColumnName="operCodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GUARDA">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.GUARDA">
+        <MappingFragment StoreEntitySet="GUARDA">
+          <ScalarProperty Name="guarCodigo" ColumnName="guarCodigo" />
+          <ScalarProperty Name="guarIdentificacion" ColumnName="guarIdentificacion" />
+          <ScalarProperty Name="guarNombre" ColumnName="guarNombre" />
+          <ScalarProperty Name="guarCelular" ColumnName="guarCelular" />
+          <ScalarProperty Name="guarDireccion" ColumnName="guarDireccion" />
+          <ScalarProperty Name="guarBarrio" ColumnName="guarBarrio" />
+          <ScalarProperty Name="guarMoto" ColumnName="guarMoto" />
+          <ScalarProperty Name="ciudCodigo" ColumnName="ciudCodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MARCA">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.MARCA">
+        <MappingFragment StoreEntitySet="MARCA">
+          <ScalarProperty Name="marcCodigo" ColumnName="marcCodigo" />
+          <ScalarProperty Name="marcNombre" ColumnName="marcNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPERADOR">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.OPERADOR">
+        <MappingFragment StoreEntitySet="OPERADOR">
+          <ScalarProperty Name="operCodigo" ColumnName="operCodigo" />
+          <ScalarProperty Name="operNombre" ColumnName="operNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLATAFORMA">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.PLATAFORMA">
+        <MappingFragment StoreEntitySet="PLATAFORMA">
+          <ScalarProperty Name="platCodigo" ColumnName="platCodigo" />
+          <ScalarProperty Name="platNombre" ColumnName="platNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PUESTO">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.PUESTO">
+        <MappingFragment StoreEntitySet="PUESTO">
+          <ScalarProperty Name="puesCodigo" ColumnName="puesCodigo" />
+          <ScalarProperty Name="puesIoc" ColumnName="puesIoc" />
+          <ScalarProperty Name="puesNombre" ColumnName="puesNombre" />
+          <ScalarProperty Name="ciudCodigo" ColumnName="ciudCodigo" />
+          <ScalarProperty Name="puesDireccion" ColumnName="puesDireccion" />
+          <ScalarProperty Name="puesBarrio" ColumnName="puesBarrio" />
+          <ScalarProperty Name="puesTelefono" ColumnName="puesTelefono" />
+          <ScalarProperty Name="puesExtencion" ColumnName="puesExtencion" />
+          <ScalarProperty Name="zonaCodigo" ColumnName="zonaCodigo" />
+          <ScalarProperty Name="ejecCodigo" ColumnName="ejecCodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIO">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.SERVICIO">
+        <MappingFragment StoreEntitySet="SERVICIO">
+          <ScalarProperty Name="servCodigo" ColumnName="servCodigo" />
+          <ScalarProperty Name="servNombre" ColumnName="servNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SISTEMAOPERATIVO">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.SISTEMAOPERATIVO">
+        <MappingFragment StoreEntitySet="SISTEMAOPERATIVO">
+          <ScalarProperty Name="sisoCodigo" ColumnName="sisoCodigo" />
+          <ScalarProperty Name="sisoNombre" ColumnName="sisoNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOCLIENTE">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.TIPOCLIENTE">
+        <MappingFragment StoreEntitySet="TIPOCLIENTE">
+          <ScalarProperty Name="tipcCodigo" ColumnName="tipcCodigo" />
+          <ScalarProperty Name="tipcNombre" ColumnName="tipcNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPODEIDENTIFICACION">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.TIPODEIDENTIFICACION">
+        <MappingFragment StoreEntitySet="TIPODEIDENTIFICACION">
+          <ScalarProperty Name="tipiCodigo" ColumnName="tipiCodigo" />
+          <ScalarProperty Name="tipiNombre" ColumnName="tipiNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOUSUARIO">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.TIPOUSUARIO">
+        <MappingFragment StoreEntitySet="TIPOUSUARIO">
+          <ScalarProperty Name="tipuCodigo" ColumnName="tipuCodigo" />
+          <ScalarProperty Name="tipuNombre" ColumnName="tipuNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="usuaCodigo" ColumnName="usuaCodigo" />
+          <ScalarProperty Name="usuaCorreo" ColumnName="usuaCorreo" />
+          <ScalarProperty Name="usuaNombre" ColumnName="usuaNombre" />
+          <ScalarProperty Name="usuaContraseña" ColumnName="usuaContraseña" />
+          <ScalarProperty Name="tipuCodigo" ColumnName="tipuCodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZONA">
+      <EntityTypeMapping TypeName="bdCasiTodoPruebaModel.ZONA">
+        <MappingFragment StoreEntitySet="ZONA">
+          <ScalarProperty Name="zonaCodigo" ColumnName="zonaCodigo" />
+          <ScalarProperty Name="zonaNombre" ColumnName="zonaNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="bdCasiTodoPruebaModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="bdCasiTodoPruebaModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="bdCasiTodoPruebaModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="bdCasiTodoPruebaModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdCasiTodoPruebaModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="bdCasiTodoPruebaModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdCasiTodoPruebaModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="bdCasiTodoPruebaModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="bdCasiTodoPruebaModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="spAdministrarActiveGuard" FunctionName="bdCasiTodoPruebaModel.Store.spAdministrarActiveGuard" />
+    <FunctionImportMapping FunctionImportName="spConsultarActiveGuard" FunctionName="bdCasiTodoPruebaModel.Store.spConsultarActiveGuard">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdCasiTodoPruebaModel.spConsultarActiveGuard_Result">
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Operador" ColumnName="Operador" />
+          <ScalarProperty Name="Bateria" ColumnName="Bateria" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarActiveGuard2" FunctionName="bdCasiTodoPruebaModel.Store.spConsultarActiveGuard2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdCasiTodoPruebaModel.spConsultarActiveGuard2_Result">
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="CodigoPuesto" ColumnName="CodigoPuesto" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="CodigoOperador" ColumnName="CodigoOperador" />
+          <ScalarProperty Name="Bateria" ColumnName="Bateria" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Operador" ColumnName="Operador" />
+          <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarEstadisticas" FunctionName="bdCasiTodoPruebaModel.Store.spConsultarEstadisticas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdCasiTodoPruebaModel.spConsultarEstadisticas_Result">
+          <ScalarProperty Name="Operador" ColumnName="Operador" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarOperador" FunctionName="bdCasiTodoPruebaModel.Store.spConsultarOperador">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdCasiTodoPruebaModel.spConsultarOperador_Result">
+          <ScalarProperty Name="operCodigo" ColumnName="operCodigo" />
+          <ScalarProperty Name="operNombre" ColumnName="operNombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarPuesto" FunctionName="bdCasiTodoPruebaModel.Store.spConsultarPuesto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdCasiTodoPruebaModel.spConsultarPuesto_Result">
+          <ScalarProperty Name="puesCodigo" ColumnName="puesCodigo" />
+          <ScalarProperty Name="puesNombre" ColumnName="puesNombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarUsuario" FunctionName="bdCasiTodoPruebaModel.Store.spConsultarUsuario" />
+    <FunctionImportMapping FunctionImportName="spEstadisticas2" FunctionName="bdCasiTodoPruebaModel.Store.spEstadisticas2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdCasiTodoPruebaModel.spEstadisticas2_Result">
+          <ScalarProperty Name="Ejecutivo" ColumnName="Ejecutivo" />
+          <ScalarProperty Name="Cantidad2" ColumnName="Cantidad2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

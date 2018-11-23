@@ -16,3 +16,15 @@ C:\Users\Usuario.Usuario-PC.000\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\De
 C:\Users\Usuario.Usuario-PC.000\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.csproj.CoreCompileInputs.cache
 C:\Users\Usuario.Usuario-PC.000\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.dll
 C:\Users\Usuario.Usuario-PC.000\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.pdb
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\bin\Debug\CasiTodo.Logica.dll.config
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\bin\Debug\CasiTodo.Logica.dll
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\bin\Debug\CasiTodo.Logica.pdb
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\bin\Debug\EntityFramework.dll
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\bin\Debug\EntityFramework.xml
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.csprojAssemblyReference.cache
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.csproj.CoreCompileInputs.cache
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.csproj.CopyComplete
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.dll
+C:\Users\Crisanger\Documents\GitHub\CasiTodo\CasiTodo.Logica\obj\Debug\CasiTodo.Logica.pdb
