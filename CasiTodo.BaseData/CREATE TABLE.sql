@@ -139,3 +139,26 @@ CREATE TABLE tbActiveGuard (
     CONSTRAINT FK_ActiveGuard_2 FOREIGN KEY (puesCodigo) REFERENCES tbPuesto (puesCodigo)
 )
 
+-- PRUEBAS
+CREATE TABLE tbPuesto (
+    puesCodigo INT NOT NULL,
+    puesIoc VARCHAR (50),
+    puesNombre VARCHAR (50) NOT NULL,
+    puesVideoVerificacion CHAR (5),
+    CONSTRAINT PK_Puesto PRIMARY KEY (puesCodigo)
+)
+
+CREATE TABLE tbElemento (
+    elemCodigo INT NOT NULL,
+    elemNombre VARCHAR (50) NOT NULL,
+    CONSTRAINT PK_Elemento PRIMARY KEY(elemCodigo)
+)
+
+CREATE TABLE tbElementoPuesto(
+    elepCodigo INT IDENTITY(1,1) NOT NULL,
+    puesCodigo INT NOT NULL,
+    elemCodigo INT NOT NULL,
+    CONSTRAINT PK_ElementoPuesto PRIMARY KEY (elepCodigo),
+    CONSTRAINT FK_ElementoPuesto_1 FOREIGN KEY (puesCodigo) REFERENCES tbPuesto (puesCodigo),
+    CONSTRAINT FK_ElementoPuesto_2 FOREIGN KEY (elemCodigo) REFERENCES tbElemento (elemCodigo)
+)
